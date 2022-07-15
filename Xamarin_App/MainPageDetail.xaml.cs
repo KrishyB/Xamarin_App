@@ -62,7 +62,7 @@ namespace Xamarin_App
 
 
 
-            for (int i = 1; i <= 50; i++) {
+            for (int i = 1; i <= 500; i++) {
                 Ieraksti.Add( new Ieraksts()
                 {
                     Numurs = i,
@@ -79,22 +79,24 @@ namespace Xamarin_App
 
             var elem = menu.BindingContext as ViewCell;
 
-            int id = Int16.Parse(elem.AutomationId)-1;
+            int id = Int16.Parse(elem.AutomationId) - 1;
 
-            if (Ieraksti[id].Virs == "Virsaksts nr. " + (id+1))
-            Ieraksti[id] = new Ieraksts() { Numurs = id+1, 
+            Ieraksts jauns = new Ieraksts()
+            {
+                Numurs = id + 1,
                 Teksts = Ieraksti[id].Teksts,
-                Virs = "Mainīts virsraksts nr." + (id + 1)
+                Virs = "",
             };
+
+            if (Ieraksti[id].Virs == "Virsaksts nr. " + (id + 1)) { 
+                jauns.Virs = "Mainīts virsraksts nr." + (id + 1);
+            }
             else
             {
-                Ieraksti[id] = new Ieraksts()
-                {
-                    Numurs = id + 1,
-                    Teksts = Ieraksti[id].Teksts,
-                    Virs = "Virsaksts nr." + (id + 1)
-                };
+                jauns.Virs = "Virsaksts nr. " + (id + 1);
             }
+
+            Ieraksti[id] = jauns;
         }
     }
     public class Ieraksts
