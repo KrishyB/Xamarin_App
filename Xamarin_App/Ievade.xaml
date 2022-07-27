@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
              x:Class="Xamarin_App.Ievade"
              Title="Ievade">
     <ContentPage.Content>
@@ -14,12 +15,37 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="40"/>
                 </Grid.ColumnDefinitions>
-                <Slider Grid.Row="0" Grid.Column="0"  Maximum="100" ValueChanged="Slider_ValueChanged_1"/>
-                <Slider Grid.Row="1" Grid.Column="0" Maximum="100" ValueChanged="Slider_ValueChanged_2"/>
+                <Slider x:Name="slider1" Grid.Row="0" Grid.Column="0"  Maximum="100" ValueChanged="Slider_ValueChanged_1"/>
+                <Slider x:Name="slider2" Grid.Row="1" Grid.Column="0" Maximum="100" ValueChanged="Slider_ValueChanged_2"/>
                 <Label x:Name="label1" Grid.Row="0" Grid.Column="1" Text="0"/>
                 <Label x:Name="label2" Grid.Row="1" Grid.Column="1" Text="0"/>
             </Grid>
-            <Button Text="Izvēlēties attēlu" Clicked="Button_Clicked"/>
+            <OnPlatform x:TypeArguments="Button">
+                <On Platform="UWP">
+                    <Button Text="Izvēlēties attēlu" Clicked="UploadPhoto"/>
+                </On>
+                <On Platform="Android">
+                    <Button Text="Uzņemt attēlu" Clicked="TakePhoto"/>
+                </On>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="xct:CameraView">
+                <On Platform="Android">
+                    <xct:CameraView
+                x:Name="cameraView"
+                CaptureMode="Photo"
+                MediaCaptured="CameraView_MediaCaptured"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand" />
+                </On>
+            </OnPlatform>
+            <Grid x:Name="KamerasRamis">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
             <Image x:Name="attels" Source="" />
         </StackLayout>
     </ContentPage.Content>

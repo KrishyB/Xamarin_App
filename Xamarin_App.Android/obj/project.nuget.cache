@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7a750BjaVLVpQhW4nj4SLBu4GOOdxHFNqHutIVRBtHXY+5WMGVOUZ41LaZmRdZhwoV/YjdDTLN+EHbSpULjlhA==",
+  "dgSpecHash": "oJTfg3xZT38Gi9PD4Mf8oUMvi59cRsfBBV8+MUtP6qg3eE+QQ0o/urhj/12TTIcbgZ3AhfT1n0tLtWVaknJzXw==",
   "success": true,
   "projectFilePath": "C:\\repos\\Xamarin_App\\Xamarin_App.Android\\Xamarin_App.Android.csproj",
   "expectedPackageFiles": [
@@ -58,8 +58,9 @@
     "C:\\Users\\lacis\\.nuget\\packages\\xamarin.androidx.versionedparcelable\\1.1.1.8\\xamarin.androidx.versionedparcelable.1.1.1.8.nupkg.sha512",
     "C:\\Users\\lacis\\.nuget\\packages\\xamarin.androidx.viewpager\\1.0.0.8\\xamarin.androidx.viewpager.1.0.0.8.nupkg.sha512",
     "C:\\Users\\lacis\\.nuget\\packages\\xamarin.androidx.viewpager2\\1.0.0.10\\xamarin.androidx.viewpager2.1.0.0.10.nupkg.sha512",
-    "C:\\Users\\lacis\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\lacis\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\lacis\\.nuget\\packages\\xamarin.communitytoolkit\\2.0.4\\xamarin.communitytoolkit.2.0.4.nupkg.sha512",
+    "C:\\Users\\lacis\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
+    "C:\\Users\\lacis\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512",
     "C:\\Users\\lacis\\.nuget\\packages\\xamarin.google.android.material\\1.4.0.2\\xamarin.google.android.material.1.4.0.2.nupkg.sha512",
     "C:\\Users\\lacis\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
   ],

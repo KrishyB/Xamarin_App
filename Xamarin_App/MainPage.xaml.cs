@@ -15,12 +15,12 @@ namespace Xamarin_App
         public MainPage()
         {
             InitializeComponent();
-            izvelne.listview.ItemSelected += izvelets;
+            izvelne.listview.ItemSelected += Izvelets;
         }
 
-        private void izvelets(object sender, SelectedItemChangedEventArgs e)
+        private void Izvelets(object sender, SelectedItemChangedEventArgs e)
         {
-            var item = e.SelectedItem as MainPageFlyoutMenuItem;
+            MainPageFlyoutMenuItem item = e.SelectedItem as MainPageFlyoutMenuItem;
             if (item != null)
             {
                 Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetPage));
