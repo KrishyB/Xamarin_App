@@ -15,8 +15,8 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="40"/>
                 </Grid.ColumnDefinitions>
-                <Slider x:Name="slider1" Grid.Row="0" Grid.Column="0"  Maximum="100" ValueChanged="Slider_ValueChanged_1"/>
-                <Slider x:Name="slider2" Grid.Row="1" Grid.Column="0" Maximum="100" ValueChanged="Slider_ValueChanged_2"/>
+                <Slider x:Name="slider1" Grid.Row="0" Grid.Column="0" Minimum="-100" Value="0" Maximum="100" ValueChanged="Slider_ValueChanged_1"/>
+                <Slider x:Name="slider2" Grid.Row="1" Grid.Column="0" Minimum="-100" Value="0" Maximum="100" ValueChanged="Slider_ValueChanged_2"/>
                 <Label x:Name="label1" Grid.Row="0" Grid.Column="1" Text="0"/>
                 <Label x:Name="label2" Grid.Row="1" Grid.Column="1" Text="0"/>
             </Grid>

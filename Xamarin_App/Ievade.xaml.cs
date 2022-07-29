@@ -12,26 +12,13 @@ namespace Xamarin_App
     {
         public ImageSource ImageSource { get; set; }
 
-        readonly SensorSpeed gyroAtrums = SensorSpeed.Default;
-        private CameraView cameraView;
+        readonly SensorSpeed gyroAtrums = SensorSpeed.UI;
 
         public Ievade()
         {
             if (Device.RuntimePlatform == Device.Android)
             {
                 Gyroscope.ReadingChanged += GyroUpdate;
-                
-                //cameraView = new CameraView()
-                //{
-                //    CaptureMode = CameraCaptureMode.Photo,
-                //    CameraOptions = CameraOptions.Back,
-                //    HorizontalOptions = LayoutOptions.FillAndExpand,
-                //    VerticalOptions = LayoutOptions.FillAndExpand,
-
-                //};
-                //cameraView.MediaCaptured += CameraView_MediaCaptured;
-
-                //KamerasRamis.Children.Add(cameraView,0,0);
             }
 
             InitializeComponent();
@@ -40,14 +27,12 @@ namespace Xamarin_App
         
         private void Slider_ValueChanged_1(object sender, ValueChangedEventArgs e)
         {
-            var slider = (Slider)sender;
-            label1.Text = slider.Value.ToString();
+            label1.Text = ((Slider)sender).Value.ToString();
         }
 
         private void Slider_ValueChanged_2(object sender, ValueChangedEventArgs e)
         {
-            var slider = (Slider)sender;
-            label2.Text = slider.Value.ToString();
+            label2.Text = ((Slider)sender).Value.ToString();
         }
 
         async void UploadPhoto(object sender, System.EventArgs e)

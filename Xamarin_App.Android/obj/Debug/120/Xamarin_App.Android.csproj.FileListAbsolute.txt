@@ -668,3 +668,4 @@ C:\repos\Xamarin_App\Xamarin_App.Android\obj\Debug\120\android\src\crc64720bb2db
 C:\repos\Xamarin_App\Xamarin_App.Android\obj\Debug\120\android\src\crc64720bb2db43a66fe9\PickerAppCompatRendererBase_1.java
 C:\repos\Xamarin_App\Xamarin_App.Android\obj\Debug\120\android\src\crc64a0e0a82d0db9a07d\Connectivity_EssentialsNetworkCallback.java
 C:\repos\Xamarin_App\Xamarin_App.Android\obj\Debug\120\android\src\crc64ee486da937c010f4\LabelAppCompatRenderer.java
+C:\repos\Xamarin_App\Xamarin_App.Android\obj\Debug\120\res\drawable\three_dots_icon.png
